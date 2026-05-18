@@ -499,16 +499,14 @@ export default function Guide() {
             </InfoBox>
           </StepCard>
 
-          <StepCard num={6} emoji="🔗" title="GitHub 직접 반영은 선택으로 쓰기" accent="#4A6CF7">
+          <StepCard num={6} emoji="🔗" title="선택 옵션: GitHub 공동 작업자 추가" accent="#4A6CF7">
             <p className="mb-3">
-              GitHub는 VPyLab 팀 협업을 시작하기 위한 필수 조건이 아닙니다.
-              다만 저장소 코드까지 직접 반영하거나, GitHub Pages 주소로 작품을 공개하려면 GitHub 권한이 필요합니다.
+              GitHub 공동 작업자 추가는 필수는 아니지만, 팀원의 개발 기여와 협력 과정을 GitHub에 공식 기록으로 남기고 싶을 때 추천합니다.
             </p>
             <InfoBox kind="tip">
-              추가 전에는 팀장만 GitHub에 기록할 수 있고, 추가 후에는 팀원도 GitHub에 기록할 수 있습니다.
-              <br />
-              공동 작업자가 되면 내 저장이 GitHub 커밋과 Pages 실행 페이지에도 남습니다.
-              팀 작품을 공개 링크로 보여줄 수 있고, README와 커밋 기록이 작은 포트폴리오처럼 쌓입니다.
+              팀원이 직접 커밋, PR, 이슈, 리뷰를 남길 수 있고 작업 내역이 본인 GitHub 계정으로 기록됩니다.
+              누가 어떤 부분에 기여했는지 명확하게 남아 협력 과정이 더 공식적으로 기록되며,
+              이후 포트폴리오, 협업 증빙, 프로젝트 히스토리 확인에도 활용하기 좋습니다.
             </InfoBox>
             <ol className="list-decimal pl-5 space-y-2">
               <li>
@@ -516,14 +514,20 @@ export default function Guide() {
                 급하면 이 단계는 나중에 해도 됩니다.
               </li>
               <li>
-                <strong>팀장:</strong> GitHub 저장소에서 <strong>Manage access → Add people</strong>로 들어갑니다.
+                <strong>팀장:</strong> VPyLab 프로젝트의 <strong>멤버 / 초대 코드</strong> 메뉴를 열고
+                <strong> 공동 작업자 초대</strong> 링크를 눌러 GitHub 접근 관리 화면으로 이동합니다.
               </li>
               <li>
-                <strong>팀장:</strong> 이 <strong>Add people</strong> 단계에서 GitHub가 2단계 인증(2FA)을 요구할 수 있습니다.
+                <strong>팀장:</strong> 또는 GitHub 저장소에서 <strong>Settings → Collaborators</strong> 또는
+                <strong> Manage access</strong>로 들어갑니다.
+              </li>
+              <li>
+                <strong>팀장:</strong> <strong>Add people</strong>을 누르고 팀원의 GitHub 아이디/이메일을 검색한 뒤
+                <strong> Invite collaborator</strong>를 누릅니다.
+              </li>
+              <li>
+                <strong>팀장:</strong> Add people 단계에서 GitHub가 2단계 인증(2FA)을 요구할 수 있습니다.
                 이때는 먼저 <strong>2FA 설정</strong>을 마칩니다. 휴대폰이 필요할 수 있습니다.
-              </li>
-              <li>
-                <strong>팀장:</strong> 팀원의 GitHub 아이디를 검색하고 <strong>Invite collaborator</strong>를 누릅니다.
               </li>
               <li>
                 <strong>팀원:</strong> GitHub 알림이나 이메일에서 초대를 열고 <strong>Accept invitation</strong>을 누릅니다.
@@ -539,13 +543,6 @@ export default function Guide() {
               초대 수락 후에는 VPyLab에서 저장하면 <strong>VPyLab 이력에 먼저 저장</strong>되고,
               GitHub 토큰과 권한이 확인되면 GitHub 저장소에도 이어서 반영됩니다.
             </p>
-            <InfoBox kind="safe">
-              VPyLab 초대 코드는 앱 안에서 함께 작업하는 권한입니다. GitHub 공동 작업자 초대는 GitHub 저장소에 직접 반영하기 위한 추가 권한입니다.
-            </InfoBox>
-            <InfoBox kind="safe">
-              GitHub 초대를 수락해도 <strong>VPyLab 초대 코드로 팀에 들어와 있어야</strong> VPyLab 안에서 프로젝트를 수정할 수 있습니다.
-              반대로 VPyLab 팀원이지만 GitHub 초대를 아직 수락하지 않았다면, VPyLab 저장은 가능하고 GitHub 반영만 보류될 수 있습니다.
-            </InfoBox>
             <InfoBox kind="warn">
               GitHub가 2단계 인증(2FA)을 요구하거나, 초대가 아직 수락되지 않았거나, 저장소 권한이 없으면 GitHub 반영이 막힐 수 있습니다.
               이때도 VPyLab 저장은 먼저 남기고, GitHub 쪽만 권한을 정리한 뒤 다시 저장하면 됩니다.
@@ -1234,14 +1231,15 @@ VPyLab에서 main.py 열고 ▶ 실행 버튼만 누르면 돼요.
             연결이 어렵다면 먼저 VPyLab 프로젝트로 작업을 시작하고, 나중에 선생님 도움을 받아도 됩니다.
           </FAQ>
 
-          <FAQ q="GitHub 공동작업자로 초대받으면 바로 VPyLab에서 수정할 수 있나요?">
-            VPyLab에서 수정하려면 먼저 <strong>VPyLab 초대 코드로 팀 프로젝트에 합류</strong>해야 합니다.
-            GitHub 공동작업자 초대는 GitHub 저장소에 직접 반영하기 위한 추가 권한이에요.
-            둘 다 된 상태라면 VPyLab에서 저장했을 때 VPyLab 이력이 먼저 남고, 권한 확인 후 GitHub 반영까지 이어집니다.
+          <FAQ q="GitHub 공동 작업자를 추가하면 어떤 점이 좋나요?">
+            팀원이 직접 커밋, PR, 이슈, 리뷰를 남길 수 있고 작업 내역이 본인 GitHub 계정으로 기록됩니다.
+            누가 어떤 부분에 기여했는지 명확하게 남아 협력 과정이 더 공식적으로 기록되고,
+            이후 포트폴리오나 협업 증빙으로도 활용하기 좋습니다.
           </FAQ>
 
           <FAQ q="GitHub 초대는 어떻게 수락하나요?">
-            팀장은 GitHub 저장소에서 <strong>Manage access → Add people</strong>로 들어가 팀원 아이디를 초대합니다.
+            팀장은 VPyLab 프로젝트의 <strong>멤버 / 초대 코드</strong> 메뉴에서 <strong>공동 작업자 초대</strong> 링크를 누르거나,
+            GitHub 저장소에서 <strong>Manage access → Add people</strong>로 들어가 팀원 아이디를 초대합니다.
             이 Add people 단계에서 GitHub가 2단계 인증(2FA)을 요구할 수 있고, 이때는 먼저 2FA 설정을 마쳐야 합니다.
             휴대폰이 필요할 수 있습니다. 팀원은 GitHub 알림이나 이메일에서 초대를 열어 <strong>Accept invitation</strong>을 누르고,
             수락 단계에서 2FA가 뜨면 같은 방식으로 설정한 뒤 VPyLab에서 GitHub 계정으로 다시 로그인합니다.

@@ -187,12 +187,14 @@ export default function TeamMembersModal({ project, onClose }) {
                 </a>
               </div>
               <p className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>
-                VPyLab 초대는 앱 안에서 함께 작업하는 권한이고, GitHub 초대는 저장소에 직접 반영하는 추가 권한입니다.
+                선택 사항입니다. 팀원별 GitHub 기여 기록을 공식적으로 남기고 싶을 때 추가하세요.
               </p>
               <div className="mt-2 space-y-1 text-[10px]" style={{ color: 'var(--color-text-muted)' }}>
-                <p><strong style={{ color: 'var(--color-text-secondary)' }}>추가 전:</strong> 팀장만 GitHub에 기록 가능 / <strong style={{ color: 'var(--color-text-secondary)' }}>추가 후:</strong> 팀원도 GitHub에 기록 가능</p>
-                <p><strong style={{ color: 'var(--color-text-secondary)' }}>좋아지는 점:</strong> 내 저장이 GitHub 커밋과 Pages 실행 페이지에도 남아 팀 작품을 공개 링크와 포트폴리오처럼 보여줄 수 있습니다.</p>
-                <p><strong style={{ color: 'var(--color-text-secondary)' }}>팀장:</strong> Manage access → Add people → 팀원 GitHub 아이디 검색 → Invite collaborator</p>
+                <p><strong style={{ color: 'var(--color-text-secondary)' }}>좋아지는 점:</strong> 팀원이 직접 커밋, PR, 이슈, 리뷰를 남길 수 있고 작업 내역이 본인 GitHub 계정으로 기록됩니다.</p>
+                <p><strong style={{ color: 'var(--color-text-secondary)' }}>공식 기록:</strong> 누가 어떤 부분에 기여했는지 명확하게 남아 협력 과정이 더 공식적으로 기록됩니다.</p>
+                <p><strong style={{ color: 'var(--color-text-secondary)' }}>활용:</strong> 포트폴리오, 협업 증빙, 프로젝트 히스토리 확인에 쓰기 좋습니다.</p>
+                <p><strong style={{ color: 'var(--color-text-secondary)' }}>팀장:</strong> 이 메뉴의 <strong>공동 작업자 초대</strong> 링크 또는 GitHub 저장소의 Manage access로 이동합니다.</p>
+                <p><strong style={{ color: 'var(--color-text-secondary)' }}>팀장:</strong> Add people → 팀원 GitHub 아이디 검색 → Invite collaborator</p>
                 <p><strong style={{ color: 'var(--color-text-secondary)' }}>팀장:</strong> Add people 단계에서 GitHub가 2FA를 요구하면 먼저 2FA 설정(휴대폰이 필요할 수 있음)을 마친 뒤 다시 초대</p>
                 <p><strong style={{ color: 'var(--color-text-secondary)' }}>팀원:</strong> GitHub 알림 또는 이메일 열기 → Accept invitation 클릭 → VPyLab에서 GitHub로 다시 로그인</p>
                 <p><strong style={{ color: 'var(--color-text-secondary)' }}>팀원:</strong> 수락 단계에서 2FA를 요구하면 설정을 마친 뒤 다시 Accept invitation</p>
