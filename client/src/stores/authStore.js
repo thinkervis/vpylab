@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import { supabase } from '../lib/supabase';
 
+const getAuthCallbackUrl = () => new URL('auth/callback', `${window.location.origin}${import.meta.env.BASE_URL}`).toString();
+
 const useAuthStore = create((set, get) => ({
   user: null,
   profile: null,
@@ -107,7 +109,7 @@ const useAuthStore = create((set, get) => ({
   signInWithGoogle: async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
+      options: { redirectTo: getAuthCallbackUrl() },
     });
     if (error) console.error('Google 로그인 오류:', error.message);
     if (data?.url) window.location.href = data.url;
@@ -127,7 +129,7 @@ const useAuthStore = create((set, get) => ({
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
+        redirectTo: getAuthCallbackUrl(),
         scopes: 'public_repo',
         skipBrowserRedirect: false,
       },
